@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Futebol Clube — Página Tema Futebol</title>
+  <meta name="description" content="Site one-page sobre futebol: notícias, próximos jogos, artilharia e galeria." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0B0F0E;
+      --card: #121716;
+      --field: #0f4d2f;
+      --field-2: #1c7f4d;
+      --line: #e5ffe9;
+      --acc: #21d07a;
+      --text: #ECF3F1;
+      --muted: #a9c7bc;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      scroll-behavior: smooth;
+    }
+
+    *{box-sizing: border-box; margin: 0; padding: 0;}
+    body{
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #07110f 0%, #0b0f0e 100%);
+    }
+
+    .nav{
+      position: fixed; top:0; left:0; width:100%; z-index:100;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,14,.85);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    }
+    .nav .wrap{
+      max-width:1200px; margin:auto; padding:16px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; font-size:1.1rem;}
+    .brand .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: conic-gradient(from 0deg, var(--field), var(--field-2));
+      display:grid; place-items:center; box-shadow: var(--shadow);
+      position:relative;
+    }
+    .brand .logo::after{
+      content:""; position:absolute; inset:6px;
+      border:3px solid var(--line); border-radius:10px;
+    }
+
+    .links{display:flex; gap:14px;}
+    .links a{
+      color:var(--text); text-decoration:none; font-weight:600;
+      padding:10px 14px; border-radius:12px; transition:.3s;
+    }
+    .links a:hover,
+    .links a.active{
+      background:var(--field-2);
+      box-shadow:0 4px 10px rgba(0,0,0,.3);
+    }
+
+    .hero{
+      padding-top:100px; text-align:left;
+      background: radial-gradient(circle at top right, #0b3322, transparent);
+    }
+    .hero .wrap{
+      max-width:1200px; margin:auto; padding:72px 20px 48px;
+      display:grid; grid-template-columns:1.1fr .9fr; gap:26px;
+      align-items:center;
+    }
+    h1{font-size:clamp(1.9rem,3.2vw,3rem); line-height:1.2;}
+    .tag{display:inline-block; background:rgba(33,208,122,.14);
+      color:#b6ffe0; padding:6px 12px; border-radius:999px;
+      font-size:.9rem; margin-bottom:10px;}
+    .sub{color:var(--muted); max-width:60ch;}
+    .cta{margin-top:22px; display:flex; gap:12px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 20px; border-radius:999px; font-weight:700;
+      background:#0f1a17; color:var(--text); text-decoration:none;
+      border:1px solid rgba(255,255,255,.12); transition:.3s;
+    }
+    .btn.primary{background:linear-gradient(135deg,var(--field-2),var(--field));}
+    .btn:hover{transform:scale(1.05); box-shadow: var(--shadow);}
+
+    .section{max-width:1200px; margin:auto; padding:60px 20px;}
+    h2{font-size:1.6rem; margin-bottom:10px;}
+
+    .grid{display:grid; gap:18px;}
+    .grid-3{grid-template-columns:repeat(3,1fr);}
+    .grid-2{grid-template-columns:repeat(2,1fr);}
+    .card{
+      background:var(--card); border-radius:var(--radius);
+      padding:18px; box-shadow:var(--shadow);
+      transition:.3s ease-in-out;
+    }
+    .card:hover{transform:translateY(-5px);}
+
+    .gallery{display:grid; grid-template-columns:repeat(6,1fr); gap:10px;}
+    .gallery .ph{aspect-ratio:1/1; border-radius:16px;
+      background:linear-gradient(135deg,#153c2a,#0e241c);
+      transition:.3s;}
+    .gallery .ph:hover{transform:scale(1.05);}
+
+    footer{
+      text-align:center; padding:20px; color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.06);
+      margin-top:40px;
+    }
+
+    #topBtn{
+      position:fixed; bottom:20px; right:20px;
+      background:var(--field-2); color:#fff; border:none;
+      padding:10px 14px; border-radius:50%; cursor:pointer;
+      font-size:20px; box-shadow:0 4px 10px rgba(0,0,0,.4);
+      transition:.3s; display:none;
+    }
+    #topBtn:hover{background:var(--field); transform:scale(1.1);}
+
+    @media(max-width:980px){
+      .hero .wrap{grid-template-columns:1fr; text-align:center;}
+      .grid-3,.grid-2{grid-template-columns:1fr;}
+      .gallery{grid-template-columns:repeat(3,1fr);}
+      .links{flex-wrap:wrap; justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo"><span class="ball">⚽</span></div>
+        <span>Futebol Clube</span>
+      </div>
+      <div class="links">
+        <a href="#noticias">Notícias</a>
+        <a href="#jogos">Jogos</a>
+        <a href="#tabela">Tabela</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">Temporada 2025</span>
+        <h1>Paixão pelo <span style="color:var(--acc)">Futebol</span> — cada lance vale a história.</h1>
+        <p class="sub">Acompanhe notícias, jogos, tabelas, fotos, competições e contato com o clube.</p>
+        <div class="cta">
+          <a class="btn primary" href="#jogos">Ver próximos jogos</a>
+          <a class="btn" href="#noticias">Ler notícias</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="noticias" class="section">
+    <h2>🗞️ Notícias</h2>
+    <div class="grid grid-3">
+      <div class="card">Novo reforço chega para o meio-campo</div>
+      <div class="card">Treino intenso prepara equipe para final</div>
+      <div class="card">Sub-20 vence clássico e lidera grupo</div>
+    </div>
+  </section>
+
+  <section id="jogos" class="section">
+    <h2>📅 Próximos Jogos</h2>
+    <div class="grid grid-2">
+      <div class="card">Futebol Clube vs Atlético Verde - 23/08 - Arena Central</div>
+      <div class="card">Futebol Clube vs Leões da Serra - 27/08 - Estádio Municipal</div>
+      <div class="card">Futebol Clube vs Estrela do Sul - 01/09 - Arena Central</div>
+      <div class="card">Futebol Clube vs Dragões do Norte - 05/09 - Estádio Municipal</div>
+    </div>
+  </section>
+
+  <section id="tabela" class="section">
+    <h2>📊 Tabela de Pontuação</h2>
+    <table class="card" style="width:100%; border-collapse:collapse;">
+      <thead>
+        <tr><th>Pos</th><th>Clube</th><th>PJ</th><th>PTS</th><th>SG</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Atlético Verde</td><td>10</td><td>26</td><td>+12</td></tr>
+        <tr><td>2</td><td>Futebol Clube</td><td>10</td><td>25</td><td>+9</td></tr>
+        <tr><td>3</td><td>Leões da Serra</td><td>10</td><td>19</td><td>+3</td></tr>
+        <tr><td>4</td><td>Estrela do Sul</td><td>10</td><td>16</td><td>+1</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="galeria" class="section">
+    <h2>📸 Galeria</h2>
+    <div class="gallery">
+      <div class="ph"></div>
+      <div class="ph"></div>
+      <div class="ph"></div>
+      <div class="ph"></div>
+      <div class="ph"></div>
+      <div class="ph"></div>
+      <div class="ph"></div>
+      <div class="ph"></div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <h2>📮 Contato</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <form action="#" method="post">
+          <label>Nome: <input type="text" name="nome" required></label><br><br>
+          <label>Email: <input type="email" name="email" required></label><br><br>
+          <label>Mensagem:<br><textarea name="mensagem" rows="4" required></textarea></label><br><br>
+          <button class="btn primary" type="submit">Enviar</button>
+        </form>
+      </div>
+      <div class="card">
+        <p>Av. do Futebol, 1914 — Bairro da Arena, Sua Cidade — BR</p>
+        <p>Atendimento: Seg–Sex 09:00–18:00 | Ingressos: a partir de R$ 40</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Futebol Clube — Feito com HTML + CSS</p>
+  </footer>
+
+  <button id="topBtn">⬆</button>
+  <script>
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = () => { topBtn.style.display = window.scrollY > 300 ? "block" : "none"; };
+    topBtn.onclick = () => window.scrollTo({ top:0, behavior:"smooth" });
+  </script>
+</body>
+</html>
