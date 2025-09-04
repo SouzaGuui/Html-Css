@@ -4,7 +4,7 @@ body{
 
 }
 .bloco1{
-    background-color: rgb(247, 247, 162);
+    background-color: rgb(231, 231, 120);
     padding: 20px;
     margin: 20px;
     color: black;
@@ -19,23 +19,23 @@ body{
     color: white;
     font-size: small;
     border-radius: 20px;
-    border: 3px solid rgb(255, 238, 0);
+    border: 3px solid rgb(255, 247, 129);
 }
 .bloco3{
-    background-color: rgb(132, 155, 238);
+    background-color: rgb(21, 25, 39);
     padding: 20px;
     margin: 20px;
-    color: rgb(0, 0, 131);
+    color: rgb(27, 27, 91);
     font-size: small;
     border-radius: 20px;
-    border: 3px solid rgb(0, 0, 131);
+    border: 3px solid rgb(60, 60, 129);
 }
 .bloco4{
     background-color: rgb(255, 255, 255);
     padding: 20px;
     margin: 20px;
-    color: rgb(182, 0, 0);
+    color: rgb(233, 103, 103);
     font-size: small;
     border-radius: 20px;
-    border: 3px solid rgb(182, 0, 0);
+    border: 3px solid rgb(238, 94, 94);
 }

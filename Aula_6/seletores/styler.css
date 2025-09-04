@@ -1,0 +1,134 @@
+/* 1. Cor do parágrafo */
+p {
+    color: blue;
+}
+
+/* 2. Título principal */
+#titulo-principal {
+    background-color: yellow;
+}
+
+/* 3. Subtítulos com classe */
+.subtitulo {
+    color: green;
+}
+
+/* 4. Estilizando listas */
+ul li {
+    color: red;
+}
+
+/* 5. Cores diferentes para divs */
+#div1 {
+    background-color: lightblue;
+    padding: 10px;
+}
+#div2 {
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+/* 6. Agrupando seletores */
+p, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+/* 7. Texto centralizado */
+#centralizado {
+    text-align: center;
+}
+
+/* 8. Diferenciando links */
+#link-google {
+    color: blue;
+}
+#link-youtube {
+    color: red;
+}
+
+/* 9. Classe compartilhada */
+.negrito {
+    font-weight: bold;
+}
+
+/* 10. Estilizando imagens */
+img {
+    border: 3px solid black;
+    width: 150px;
+    height: auto;
+}
+
+/* 11. Descendente básico */
+div p {
+    color: purple;
+}
+
+/* 12. Dois parágrafos diferentes */
+.p1 {
+    color: orange;
+}
+.p2 {
+    color: teal;
+}
+
+/* 13. Mudando fonte */
+#fonte-titulo {
+    font-family: Arial, sans-serif;
+}
+
+/* 14. Negrito, itálico e sublinhado */
+.bold {
+    font-weight: bold;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}
+
+/* 15. Cor apenas no título dentro da div */
+.caixa-titulo h3 {
+    color: darkblue;
+}
+
+/* 16. Seletores repetidos */
+#caixa1 {
+    background-color: red;
+    padding: 10px;
+    color: white;
+}
+#caixa2 {
+    background-color: green;
+    padding: 10px;
+    color: white;
+}
+#caixa3 {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+}
+
+/* 17. Estilizando span */
+.destaque {
+    color: darkorange;
+    font-weight: bold;
+}
+
+/* 18. Caixa colorida */
+#caixa-colorida {
+    background-color: pink;
+    border: 2px solid purple;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+/* 19. Links com classe */
+.sublinhado {
+    text-decoration: underline;
+}
+
+/* 20. Agrupando tudo */
+h1, p, a {
+    color: #333;
+}
