@@ -1,0 +1,138 @@
+/*
+   Estilo geral da página
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*
+   Estilo padrão para todas as tabelas
+*/
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* 3. Agenda de Compromissos - Texto azul */
+.tabela3 td, .tabela3 th {
+    color: blue;
+}
+
+/* 5. Notas dos Alunos - Cabeçalho maior */
+.tabela5 th {
+    font-size: 1.2em;
+}
+
+/* 6. Cardápio da Semana - Fundo claro */
+.tabela6 td, .tabela6 th {
+    background-color: #f0f8ff;
+}
+
+/* 7. Horário das Aulas - Centralizar texto */
+.tabela7 td, .tabela7 th {
+    text-align: center;
+}
+
+/* 8. Resultados do Campeonato - Borda grossa */
+.tabela8 td, .tabela8 th {
+    border: 3px solid #333;
+}
+
+/* 9. Preços de Mercado - Cabeçalho vermelho */
+.tabela9 th {
+    color: red;
+}
+
+/* 10. Lista de Filmes - Espaçamento maior nas células */
+.tabela10 td, .tabela10 th {
+    padding: 15px 20px;
+}
+
+/* 11. Frutas Preferidas - Texto em itálico */
+.tabela11 td {
+    font-style: italic;
+}
+
+/* 12. Tabuada - Números em negrito */
+.tabela12 td {
+    font-weight: bold;
+}
+
+/* 13. Matérias Escolares - Primeira linha com fundo diferente */
+.tabela13 tr:first-child th {
+    background-color: #dcdcdc;
+}
+
+/* 14. Lista de Funcionários - Texto verde */
+.tabela14 td, .tabela14 th {
+    color: green;
+}
+
+/* 15. Restaurante - Fonte diferente e maior */
+.tabela15 td, .tabela15 th {
+    font-family: Verdana, sans-serif;
+    font-size: 1.1em;
+}
+
+/* 16. Calendário Simplificado - Segunda linha com fundo */
+.tabela16 tr:nth-child(2) td {
+    background-color: #e6e6fa;
+}
+
+/* 17. Boletim Escolar - Cabeçalho escuro com letra clara */
+.tabela17 th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 18. Países e Capitais - Letras maiúsculas */
+.tabela18 td, .tabela18 th {
+    text-transform: uppercase;
+}
+
+/* 19. Catálogo de Livros - Fonte apenas no cabeçalho */
+.tabela19 th {
+    font-family: "Courier New", monospace;
+}
+
+/* 20. Tema Livre - Fundo colorido, borda destacada, cabeçalho diferenciado */
+.tabela20 td, .tabela20 th {
+    border: 2px solid #444;
+    background-color: #fdf5e6;
+    color: #222;
+}
+
+.tabela20 th {
+    background-color: #ffa500;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 
+   Extras - Efeito hover em todas as tabelas
+ */
+table tr:hover {
+    background-color: #f1f1f1;
+}
