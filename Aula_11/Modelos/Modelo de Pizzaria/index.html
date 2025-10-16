@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family:"Poppins", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://www.plural.jor.br/wp-content/uploads/2022/04/receita-ratatouille-classico.jpg?wpId=140252');
+  min-height: 90%;
+}
+</style>
+</head>
+<body>
+
+<!--barra de navegação (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-light-blue w3-opacity w3-hover-opacity-off w3-hover-light-blue" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button w3-hover-blue">INÍCIO</a>
+    <a href="#menu" class="w3-bar-item w3-button w3-hover-blue">MENU</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hover-blue">SOBRE</a>
+    <a href="#myMap" class="w3-bar-item w3-button w3-hover-blue">CONTATOS</a>
+  </div>
+</div>
+  
+<!-- Cabeçalho com imagem -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge w3-light-blue">Aberto as 10:00 horas as 00:00 horas</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Conheça<br>A Pizzaria Remi</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>CRUST PIZZA</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-light-blue w3-hover-blue">Conheça o Menu</a></p>
+  </div>
+</header>
+
+<!-- Menu de contêiner -->
+<div class="w3-container w3-light-gray w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">MENU</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-light-blue">Pizza</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-light-blue">Pastas</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-light-blue">Entradas</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-light-blue">Bebidas</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Desserts');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-light-blue">Sobremesa</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Alternatives');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-light-blue">Alternativos</div>
+      </a>
+
+    </div>
+
+
+    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+
+     <h1><b>Marguerita</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 68,54</span>
+     </h1>
+     <p class="w3-text-grey">Tomates frescos, mussarela de búfala e manjericão fresco.</p>
+     <hr>
+
+     <h1><b>Quatro Queijos</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 84,48</span>
+     </h1>
+     <p class="w3-text-grey">Deliciosa combinação de mussarela, parmesão, pecorino e jarlsberg.</p>
+     <hr>
+  
+     <h1><b>Frango com Cebola</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 92,65</span>
+     </h1>
+     <p class="w3-text-grey">Tomates frescos, mussarela, frango desfiado e cebola levemente dourada.</p>
+     <hr>
+
+     <h1><b>Havaiana</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 79,90</span>
+     </h1>
+     <p class="w3-text-grey">Tomates frescos, mussarela, abacaxi em cubos, bacon crocante e manjericão.</p>
+     <hr>
+
+     <h1><b>Carne Suprema</b> 
+     <span class="w3-tag w3-red w3-round">Picante!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 89,00</span>
+     </h1>
+     <p class="w3-text-grey">Molho de tomate, mussarela, pepperoni picante, linguiça, carne bovina e frango.</p>
+     <hr>
+
+     <h1><b>Parma Especial</b> 
+     <span class="w3-tag w3-grey w3-round">Nova!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 94,50</span>
+     </h1>
+     <p class="w3-text-grey">Tomates frescos, mussarela, presunto de Parma, bacon e rúcula fresca.</p>
+
+
+     <h1><b>Parma</b> <span class="w3-tag w3-grey w3-round">New</span><span class="w3-right w3-tag w3-dark-grey w3-round">$21.50</span></h1>
+     <p class="w3-text-grey">Fresh tomatoes, mozzarella, parma, bacon, fresh arugula</p>
+    </div>
+
+    
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+
+      <h1><b>Lasanha Tradicional</b> 
+     <span class="w3-tag w3-grey w3-round">Popular</span> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 79,90</span>
+     </h1>
+     <p class="w3-text-grey">Massa fresca em camadas com molho especial, carne moída, mussarela e parmesão gratinado.</p>
+     <hr>
+
+     <h1><b>Ravioli de Queijo</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 84,50</span>
+     </h1>
+     <p class="w3-text-grey">Raviolis recheados com uma cremosa mistura de queijos e cobertos com molho de tomate artesanal.</p>
+     <hr>
+  
+     <h1><b>Espaguete à Bolonhesa</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 72,00</span>
+     </h1>
+     <p class="w3-text-grey">Espaguete com molho de tomates frescos, carne moída e cebolas douradas.</p>
+     <hr>
+
+     <h1><b>Massa com Frutos do Mar</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 112,50</span>
+     </h1>
+     <p class="w3-text-grey">Camarões, salmão e lagosta salteados no alho e azeite com um toque de limão siciliano.</p>
+     <hr>
+
+     <h1><b>Fettuccine Alfredo</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 89,90</span>
+     </h1>
+     <p class="w3-text-grey">Fettuccine ao molho cremoso de parmesão, manteiga e creme de leite fresco — um clássico italiano.</p>
+     <hr>
+
+     <h1><b>Penne ao Pesto</b> 
+     <span class="w3-tag w3-green w3-round">Novo!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 83,00</span>
+     </h1>
+     <p class="w3-text-grey">Penne envolto em molho pesto de manjericão fresco, nozes e parmesão, finalizado com azeite extravirgem.</p>
+
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+
+     <h1><b>Sopa do Dia</b> 
+     <span class="w3-tag w3-grey w3-round">Sazonal</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 29,90</span>
+     </h1>
+     <p class="w3-text-grey">Consulte o garçom para saber a sopa especial do dia, preparada com ingredientes frescos da estação.</p>
+     <hr>
+
+     <h1><b>Bruschetta Tradicional</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 39,90</span>
+     </h1>
+     <p class="w3-text-grey">Pão italiano crocante com pesto de manjericão, tomates frescos, cebola e alho.</p>
+     <hr>
+  
+      <h1><b>Pão de Alho Artesanal</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 34,50</span>
+     </h1>
+     <p class="w3-text-grey">Pão ciabatta grelhado com manteiga de alho, ervas finas e cebola levemente dourada.</p>
+     <hr>
+
+     <h1><b>Tomozzarella</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 42,00</span>
+     </h1>
+     <p class="w3-text-grey">Tomates frescos e mussarela de búfala com um fio de azeite e toque de manjericão.</p>
+     <hr>
+
+     <h1><b>Salada Caprese</b> 
+     <span class="w3-tag w3-green w3-round">Leve!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 44,90</span>
+     </h1>
+     <p class="w3-text-grey">Tomates frescos, mussarela de búfala, folhas de manjericão e redução de aceto balsâmico.</p>
+     <hr>
+
+     <h1><b>Antepasto Italiano</b> 
+     <span class="w3-tag w3-red w3-round">Novo!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 48,50</span>
+     </h1>
+     <p class="w3-text-grey">Seleção de frios, queijos, azeitonas, pães e legumes marinados em azeite e ervas.</p>
+
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-32 w3-white">
+
+     <h1><b>Refrigerantes</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 9,00</span>
+     </h1>
+     <p class="w3-text-grey">Coca-Cola, Guaraná, Sprite ou Pepsi — lata 350 ml.</p>
+     <hr>
+
+     <h1><b>Suco Natural</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 14,90</span>
+     </h1>
+     <p class="w3-text-grey">Sabores: laranja, abacaxi, maracujá, limão ou morango, preparados na hora.</p>
+     <hr>
+
+     <h1><b>Água Mineral</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 6,50</span>
+     </h1>
+     <p class="w3-text-grey">Com ou sem gás, servida gelada.</p>
+     <hr>
+
+     <h1><b>Chá Gelado</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 12,00</span>
+     </h1>
+     <p class="w3-text-grey">Chá preto ou verde com limão e hortelã — refrescante e leve.</p>
+     <hr>
+
+     <h1><b>Cerveja Artesanal</b> 
+     <span class="w3-tag w3-grey w3-round">Popular</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 19,90</span>
+     </h1>
+     <p class="w3-text-grey">Cervejas locais e importadas, consulte o garçom pelas opções do dia.</p>
+     <hr>
+
+     <h1><b>Vinho da Casa</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 24,50</span>
+     </h1>
+     <p class="w3-text-grey">Taça de vinho tinto ou branco selecionado especialmente para harmonizar com nossos pratos.</p>
+     <hr>
+
+     <h1><b>Caipirinha Clássica</b> 
+     <span class="w3-tag w3-green w3-round">Especial</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 22,00</span>
+     </h1>
+     <p class="w3-text-grey">Feita com cachaça artesanal, limão fresco, açúcar e gelo — o sabor do Brasil.</p>
+
+    </div>
+  
+
+    <div id="Desserts" class="w3-container menu w3-padding-32 w3-white">
+
+     <h1><b>Tiramisù</b> 
+     <span class="w3-tag w3-grey w3-round">Clássico</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 28,90</span>
+     </h1>
+     <p class="w3-text-grey">Camadas de biscoito embebido em café, creme de mascarpone e cacau em pó.</p>
+     <hr>
+
+     <h1><b>Pudim de Leite</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 17,50</span>
+     </h1>
+     <p class="w3-text-grey">Tradicional pudim caseiro com calda dourada de caramelo.</p>
+     <hr>
+
+     <h1><b>Petit Gâteau</b> 
+     <span class="w3-tag w3-red w3-round">Favorito!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 29,90</span>
+     </h1>
+     <p class="w3-text-grey">Bolinho de chocolate com casca crocante e interior cremoso, servido com sorvete de creme.</p>
+     <hr>
+
+     <h1><b>Cheesecake de Frutas Vermelhas</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 26,00</span>
+     </h1>
+     <p class="w3-text-grey">Base crocante com creme de queijo suave e calda artesanal de frutas vermelhas.</p>
+     <hr>
+
+     <h1><b>Gelato Italiano</b> 
+     <span class="w3-tag w3-green w3-round">Novo!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 22,00</span>
+     </h1>
+     <p class="w3-text-grey">Sorvete artesanal cremoso em diversos sabores: chocolate, pistache, baunilha e morango.</p>
+     <hr>
+
+     <h1><b>Pavê de Chocolate</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 24,50</span>
+     </h1>
+     <p class="w3-text-grey">Camadas de biscoito, creme de chocolate e chantilly — uma tentação irresistível.</p>
+
+    </div>
+
+  
+    <div id="Alternatives" class="w3-container menu w3-padding-32 w3-white">
+
+    <h1><b>Pizza de Chocolate</b> 
+     <span class="w3-tag w3-red w3-round">Favorita!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 46,90</span>
+     </h1>
+     <p class="w3-text-grey">Massa fina crocante coberta com creme de chocolate ao leite, raspas de chocolate meio amargo e morangos frescos.</p>
+     <hr>
+
+     <h1><b>Pizza de Nutella com Banana</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 49,50</span>
+     </h1>
+     <p class="w3-text-grey">Deliciosa combinação de Nutella cremosa com rodelas de banana caramelizada e açúcar de confeiteiro.</p>
+     <hr>
+
+     <h1><b>Mini Pizza Doce</b> 
+     <span class="w3-tag w3-grey w3-round">Individual</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 24,90</span>
+     </h1>
+     <p class="w3-text-grey">Mini pizzas doces em sabores variados: chocolate, doce de leite, morango ou prestígio.</p>
+     <hr>
+
+     <h1><b>Mini Pizza de Oreo</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 27,90</span>
+     </h1>
+     <p class="w3-text-grey">Base crocante com creme de baunilha e pedacinhos de biscoito Oreo, finalizada com calda de chocolate.</p>
+     <hr>
+
+     <h1><b>Brownie com Sorvete</b> 
+     <span class="w3-tag w3-green w3-round">Extra!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 29,00</span>
+     </h1>
+     <p class="w3-text-grey">Brownie quente de chocolate com sorvete de creme e calda de caramelo.</p>
+     <hr>
+
+     <h1><b>Pizza de Doce de Leite e Coco</b> 
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 45,00</span>
+     </h1>
+     <p class="w3-text-grey">Massa leve coberta com doce de leite cremoso e coco ralado, finalizada com toque de canela.</p>
+     <hr>
+
+     <h1><b>Sorvete Artesanal</b> 
+     <span class="w3-tag w3-blue w3-round">Novo!</span>
+     <span class="w3-right w3-tag w3-dark-grey w3-round">R$ 21,90</span>
+     </h1>
+     <p class="w3-text-grey">Sorvetes artesanais em sabores especiais: chocolate belga, pistache, creme, morango e paçoca.</p>
+
+   </div>
+
+   </div>
+
+<!-- Sobre a Pizzaria Remi -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Sobre a Pizzaria Remi</h1>
+    
+    <p>A <strong>Pizzaria Remi</strong> foi fundada em 2005 com o objetivo de trazer o verdadeiro sabor da Itália para o coração da cidade. Inspirada pelo chef Remi — mestre da culinária italiana que acredita que cozinhar é uma forma de amor —, nossa pizzaria combina <strong>ingredientes frescos, receitas tradicionais</strong> e um toque especial de criatividade.</p>
+    
+    <p>Na Remi, cada pizza é preparada artesanalmente, com massas de fermentação natural e molhos caseiros feitos diariamente. Nosso ambiente foi planejado para proporcionar conforto e aconchego, com decoração que mistura o charme das pizzarias italianas clássicas e a alegria brasileira.</p>
+    
+    <p>Nosso cardápio oferece opções para todos os gostos — das pizzas salgadas tradicionais às versões doces irresistíveis — sempre acompanhadas por bebidas selecionadas e um atendimento caloroso que faz você se sentir em casa.</p>
+    
+    <p>A <strong>Pizzaria Remi</strong> é mais do que um restaurante: é um lugar onde amigos e famílias se reúnem para celebrar bons momentos, saborear ótimas comidas e viver experiências inesquecíveis.</p>
+    
+    <p><strong>O Chef:</strong> o próprio <strong>Remi</strong> 
+      <img src="https://bragard.com.br/media/magefan_blog/codazon_blog_1513680692.jpg" style="width:150px" class="w3-circle w3-right" alt="Chef Remi">
+    </p>
+    
+    <p>Temos orgulho de nosso ambiente acolhedor e decoração inspirada na Itália.</p>
+    
+    <img src="https://www.turismo-sa.com/imagens/Ratatouille.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom w3-round-large" alt="Restaurante Remi">
+    
+    <h1><b>Horário de Funcionamento</b></h1>
+    
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <p><strong>Segunda e Terça:</strong> Fechado</p>
+        <p><strong>Quarta-feira:</strong> 10:00 - 00:00</p>
+        <p><strong>Quinta-feira:</strong> 10:00 - 00:00</p>
+      </div>
+      <div class="w3-half">
+        <p><strong>Sexta-feira:</strong> 10:00 - 00:00</p>
+        <p><strong>Sábado:</strong> 10:00 - 23:00</p>
+        <p><strong>Domingo:</strong> Fechado</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<!-- Imagem de localização/mapa -->
+<img src="https://www.disneytouristblog.com/wp-content/uploads/2015/01/bistrot-chez-remy-interior.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contato -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="contact">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contato</h1>
+    
+     <p>Venha nos visitar: Rua das Pizzas, 123 - Centro, Cidade XYZ ou ligue para <strong>(11) 5050-5122</strong></p>
+    
+     <p><span class="w3-tag">Atenção!</span> Oferecemos serviço completo de buffet para qualquer evento, grande ou pequeno. Entendemos suas necessidades e cuidaremos para que cada prato seja impecável, tanto no sabor quanto na apresentação.</p>
+    
+     <p class="w3-xxlarge"><strong>Reserve</strong> sua mesa, consulte o prato do dia ou envie uma mensagem:</p>
+    
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nome" required name="Nome"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Quantidade de pessoas" required name="Pessoas"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Data e horário" required name="DataHora" value="2025-10-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensagem / Solicitações especiais" required name="Mensagem"></p>
+      <p><button class="w3-button w3-light-blue w3-block w3-hover-blue" type="submit">ENVIAR MENSAGEM</button></p>
+    </form>
+    
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-light-blue",);
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-light-blue";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
