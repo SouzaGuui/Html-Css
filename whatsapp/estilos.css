@@ -1,0 +1,210 @@
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+
+:root {
+    --bg-color: #abc8d2;
+    --accent-color: #1C62C4;
+    --card-bg: #ffffff;
+    --text-color: #1c1c1c;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', Arial, sans-serif;
+    margin:0;
+    padding-top: 64px; /* Espaço para a barra superior */
+}
+
+#top-bar{
+    position: fixed;
+    top:0; left:0; right:0;
+    height: 56px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+#top-bar .left{ display:flex; align-items:center; gap:12px; }
+#top-bar .right{ display:flex; align-items:center; gap:8px; }
+/* Aumentar tamanho das duas divs do topo */
+#top-bar .left, #top-bar .right{ font-size: 16px; padding: 8px 0; }
+.util-btn{
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor:pointer;
+    font-size: 13px;
+}
+.util-btn:hover{ background: rgba(255,255,255,0.18); }
+
+#conteudo{ max-width: 720px; margin: 0 auto; }
+
+#caixa-chat{ background: transparent; overflow-x: hidden; }
+
+#chat{ display: flex; flex-direction: column; gap: 10px; overflow-x: hidden; }
+
+/* Entrada fixa opcional: se quiser fixar a barra de envio
+   ajuste o form na página para uma classe .input-bar */
+.input-bar{ position: fixed; left:0; right:0; bottom:0; background:#fff; padding:8px 12px; border-top:1px solid #ddd; }
+.input-bar textarea{ height: 60px; }
+
+.dados-chat{
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    width:100%;
+    margin-bottom:5px;
+    border-bottom:1px solid silver;
+    font-weight:bold;
+    font-family: 'Mukta Vaani', sans-serif;
+}
+
+.dados-chat span { display:inline-block; margin-right:6px; }
+
+/* Form padrão */
+form{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+form textarea{
+    width: 100%; max-width: 640px; min-height: 60px; border-radius: 8px;
+    border: 1px solid #d0d0d0; padding: 8px; outline: none; display:block; margin:0 auto;
+}
+form input[type="text"],
+form input[type="password"]{
+    width: 100%;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #d0d0d0;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+form input[type="submit"],
+button, .btn{
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor:pointer;
+}
+form input[type="submit"]:hover, button:hover { filter: brightness(1.05); }
+
+/* Painel de emojis e utilitários no canto inferior esquerdo */
+#emoji-toggle button.emoji-insert,
+.emoji-insert {
+    background:#f5f5f5;
+    border:1px solid #ddd;
+    border-radius:6px;
+    padding:6px;
+    cursor:pointer;
+}
+.emoji-insert:hover { background:#eaeaea; }
+
+/* Removido bloco de utilitários inferiores */
+
+#color-panel, #emoji-panel{
+    background:#fff; border:1px solid #ccc; border-radius:8px; padding:8px;
+    box-shadow:0 6px 16px rgba(0,0,0,0.15);
+}
+
+#color-panel{ position:absolute; right:12px; top:60px; display:none; }
+#emoji-panel{ position:absolute; right:12px; top:110px; display:none; }
+
+/* Linhas e descrição no painel de cores */
+#color-panel .row{ display:flex; align-items:center; justify-content: space-between; gap:8px; }
+#color-panel label{ font-size: 13px; color:#333; }
+#color-panel .help{ display:block; font-size:12px; color:#555; opacity:.85; margin-top:4px; }
+
+.swatch{
+    width:24px; height:24px; border-radius:50%; border:1px solid #888;
+    cursor:pointer;
+}
+
+#photo-preview { margin-top:10px; }
+#photo-preview img{ max-width: 100%; border-radius: 10px; }
+
+/* Emoji panel básico */
+#conteudo{
+    background: #fff;
+    margin:0 auto;
+    padding:20px;
+    border-radius: 12px;
+    -moz-border-radius:12px;
+    -o-border-radius:12px;
+    -webkit-border-radius:12px;
+}
+
+/* removido width fixo para melhor responsividade */
+
+#caixa-chat{
+    width:100%;
+    /* encostar a rolagem à direita do main compensando o padding do main */
+    margin-right: -20px; /* igual ao padding-right de #conteudo */
+}
+
+#chat{
+    max-height: 400px;
+    overflow-y: auto; /* rolagem dentro do section do chat */
+    padding-right: 0;
+}
+
+/* já unificado em bloco anterior */
+
+/* removidos estilos genéricos duplicados em favor dos estilos de form */
+#conteudo.auth{
+    max-width: 380px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#conteudo.auth h2{ text-align:center; }
+#conteudo.auth form{ width: 100%; max-width: 360px; text-align: left; }
+#conteudo.auth p{ margin-top: 16px; }
+
+/* Centralizar inputs dentro das páginas de autenticação */
+#conteudo.auth{ text-align: center; }
+#conteudo.auth form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 12px;
+}
+#conteudo.auth form input[type="text"],
+#conteudo.auth form input[type="password"],
+#conteudo.auth form input[type="submit"],
+#conteudo.auth form textarea{
+    width: 320px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Removidas as ações de curtida/comentário */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Ações de comentário estilo YouTube */
+.comment-actions{ display:flex; align-items:center; gap:10px; margin-top:8px; }
+.comment-actions .btn-sm{ background:#fff; color:#000; border:1px solid #ccc; padding:2px 6px; border-radius:8px; cursor:pointer; font-size:13px; filter: grayscale(100%); }
+.comment-actions .btn-sm.active{ border-color: var(--accent-color); color: var(--accent-color); }
+.comment-replies{ margin-top:8px; padding-left:10px; border-left:2px solid #ddd; display:flex; flex-direction:column; gap:6px; }
+.reply-box{ display:flex; gap:6px; margin-top:6px; align-items: center; }
+.reply-box input{ flex:1; height:32px; border:1px solid #ccc; border-radius:6px; padding:6px; }
+.reply-box button{ height:32px; }
