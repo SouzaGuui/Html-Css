@@ -6,7 +6,7 @@ $versao = 1.1;
 
 $data_atual = "20/11/2025";
 
-$autor = "Erick Rodrigues Pedroso";
+$autor = "Guilherme de Souza Leite";
 
 ?>
 

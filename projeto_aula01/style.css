@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Cabeçalho com dados pessoais em linha */
+.header-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.header-info .field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-info label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.header-info input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Título do questionário */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 25px 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #3498db;
+    font-size: 22px;
+}
+
+/* Pergunta */
+.question {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+.question strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+/* Opções de rádio */
+.options {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.options label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.options input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Campo de comentário */
+.comment {
+    margin-top: 10px;
+}
+
+.comment label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.comment textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Textarea das perguntas dissertativas */
+.question textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Botões */
+.btn-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 10px 24px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn.save {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn.clear {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-info {
+        grid-template-columns: 1fr;
+    }
+    .question {
+        padding: 12px;
+    }
+}

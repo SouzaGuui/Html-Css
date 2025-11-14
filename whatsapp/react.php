@@ -5,6 +5,21 @@ require_login();
 
 header('Content-Type: application/json; charset=UTF-8');
 
+function ensure_reaction_columns($conexao){
+    $needLikes = true; $needDislikes = true;
+    if($res = $conexao->query("SHOW COLUMNS FROM tb_chat LIKE 'likes'")){
+        $needLikes = ($res->num_rows === 0);
+        $res->close();
+    }
+    if($res = $conexao->query("SHOW COLUMNS FROM tb_chat LIKE 'dislikes'")){
+        $needDislikes = ($res->num_rows === 0);
+        $res->close();
+    }
+    if($needLikes){ $conexao->query("ALTER TABLE tb_chat ADD COLUMN likes INT NOT NULL DEFAULT 0"); }
+    if($needDislikes){ $conexao->query("ALTER TABLE tb_chat ADD COLUMN dislikes INT NOT NULL DEFAULT 0"); }
+}
+
+ensure_reaction_columns($conexao);
 
 $id = isset($_POST['id']) ? intval($_POST['id']) : 0;
 $type = isset($_POST['type']) ? $_POST['type'] : '';

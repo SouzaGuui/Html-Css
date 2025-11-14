@@ -65,11 +65,6 @@ body{
     border-radius: 12px;
     padding: 10px 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    width:100%;
-    margin-bottom:5px;
-    border-bottom:1px solid silver;
-    font-weight:bold;
-    font-family: 'Mukta Vaani', sans-serif;
 }
 
 .dados-chat span { display:inline-block; margin-right:6px; }
@@ -136,7 +131,18 @@ form input[type="submit"]:hover, button:hover { filter: brightness(1.05); }
 #photo-preview img{ max-width: 100%; border-radius: 10px; }
 
 /* Emoji panel básico */
+#emoji-toggle button.emoji-insert,
+.emoji-insert {
+    background:#f5f5f5;
+    border:1px solid #ddd;
+    border-radius:6px;
+    padding:6px;
+    cursor:pointer;
+}
+.emoji-insert:hover { background:#eaeaea; }
+
 #conteudo{
+    width:40%;
     background: #fff;
     margin:0 auto;
     padding:20px;
@@ -145,8 +151,6 @@ form input[type="submit"]:hover, button:hover { filter: brightness(1.05); }
     -o-border-radius:12px;
     -webkit-border-radius:12px;
 }
-
-/* removido width fixo para melhor responsividade */
 
 #caixa-chat{
     width:100%;
@@ -160,9 +164,45 @@ form input[type="submit"]:hover, button:hover { filter: brightness(1.05); }
     padding-right: 0;
 }
 
-/* já unificado em bloco anterior */
+.dados-chat{
+    width:100%;
+    padding:5px;
+    margin-bottom:5px;
+    border-bottom:1px solid silver;
+    font-weight:bold;
+    font-family: 'Mukta Vaani', sans-serif;
 
-/* removidos estilos genéricos duplicados em favor dos estilos de form */
+}
+
+input[type='text']{
+    width:100%;
+    height:40px;
+    border:1px solid gray;
+    border-radius:5px;
+}
+
+
+input[type='submit']{
+    width:100%;
+    height:40px;
+    border:1px solid gray;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+
+textarea{
+    width:100%;
+    height:40px;
+    border:1px solid gray;
+    border-radius:5px;
+    resize: none;
+}
+
+
+input, textarea{
+    margin-bottom: 3px;
+}
 #conteudo.auth{
     max-width: 380px;
     margin: 0 auto;

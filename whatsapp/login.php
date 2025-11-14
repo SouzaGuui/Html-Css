@@ -2,6 +2,14 @@
 require_once 'bd.php';
 require_once 'auth.php';
 
+// Cria tabela de usuários se não existir
+$conexao->query("CREATE TABLE IF NOT EXISTS tb_users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
 $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = isset($_POST['username']) ? trim($_POST['username']) : '';

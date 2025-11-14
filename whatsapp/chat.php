@@ -1,6 +1,21 @@
 <?php
 require_once 'bd.php';
 
+// garante que a tabela possui colunas de reações
+function ensure_reaction_columns($conexao){
+    $needLikes = true; $needDislikes = true;
+    if($res = $conexao->query("SHOW COLUMNS FROM tb_chat LIKE 'likes'")){
+        $needLikes = ($res->num_rows === 0);
+        $res->close();
+    }
+    if($res = $conexao->query("SHOW COLUMNS FROM tb_chat LIKE 'dislikes'")){
+        $needDislikes = ($res->num_rows === 0);
+        $res->close();
+    }
+    if($needLikes){ $conexao->query("ALTER TABLE tb_chat ADD COLUMN likes INT NOT NULL DEFAULT 0"); }
+    if($needDislikes){ $conexao->query("ALTER TABLE tb_chat ADD COLUMN dislikes INT NOT NULL DEFAULT 0"); }
+}
+ensure_reaction_columns($conexao);
 
 $consulta = "SELECT id, nome, mensagem, data, likes, dislikes FROM tb_chat ORDER BY id DESC";
 $executar = $conexao->query($consulta);

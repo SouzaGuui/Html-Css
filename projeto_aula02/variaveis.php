@@ -2,7 +2,7 @@
 
 // A. String (Texto): Nome do aluno
 
-$nome_aluno = "Erick Rodrigues Pedroso";
+$nome_aluno = "Guilherme de Souza Leite";
 
 // B. Integer (Inteiro): Idade do aluno
 

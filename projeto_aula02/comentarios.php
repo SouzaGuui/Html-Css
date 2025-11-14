@@ -1,14 +1,13 @@
 <?php
 
 // 1. Crie um Comentário de Linha Única com seu nome completo.
- #Erick Rodrigues Pedroso
+ #Guilherme de Souza Leite
 /*
 
 2. Crie um Comentário de Bloco com:
 
-Data: 07/11/2025
-
-/*O dia de hoje será numa média de 23°, e terá chance de chover no final da tarde
+Data: 14/11/2025
+/*O dia de hoje será numa média de 23° a 16°, e será nublado pelo resto da tarde
 
 */
 
