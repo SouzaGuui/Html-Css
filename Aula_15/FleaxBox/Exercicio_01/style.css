@@ -1,0 +1,17 @@
+html, body { height: 100%; }
+
+body { margin: 0; }
+
+.container { 
+display: flex; 
+min-height: 100vh;
+justify-content: center;
+align-items: center;
+background: #f0f0f0;
+}
+.box {
+width: 150px;
+height: 150px;
+background: #4a90e2;
+border-radius: 8px;
+}

@@ -1,0 +1,6 @@
+body { margin: 0; }
+.galeria { display: flex; flex-wrap: wrap; gap: 12px; padding: 12px; }
+.item { flex: 1 1 calc(25% - 12px); min-width: 180px; height: 120px; background: #dfe6e9; border-radius: 8px; }
+@media (max-width: 900px) { .item { flex-basis: calc(33.333% - 12px); } }
+@media (max-width: 600px) { .item { flex-basis: calc(50% - 12px); } }
+@media (max-width: 400px) { .item { flex-basis: 100%; } }
